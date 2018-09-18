@@ -2,8 +2,11 @@
 
 {% block title %} Explore page {% end %}
 
-{% block connect %}
-<h3>这是一个发现页</h3><br>
-Hello Tornado
+{% block content %}
+
+    {% for i in imgs %}
+    <img src="{{ static_url(i) }}" alt="" >
+    {% end %}
+
 {% end %}
 
