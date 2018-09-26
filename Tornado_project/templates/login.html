@@ -1,0 +1,18 @@
+{% extends base.html %}
+
+{% block title %} Login page {% end %}
+
+{% block content %}
+    <div class="contain-regist">
+        <form action="/login?next={{ nextname }}" enctype="multipart/form-data" method="post">
+            Username:&nbsp<input type="text" placeholder="请输入用户名" name="username"><br>
+            Password:&nbsp&nbsp<input type="password" placeholder="请输入密码" name="password"><br>
+            <input class="ind" type="submit" value="登录">
+        </form>
+    </div>
+    <div>
+        没有账号请点这里<a href="/register">注册</a>
+    </div>
+
+{% end %}
+

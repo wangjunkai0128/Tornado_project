@@ -1,0 +1,22 @@
+{% extends base.html %}
+
+{% block title %} Register page {% end %}
+
+{% block content %}
+
+    {% if msg %}
+    {{ msg }}
+    {% end %}
+    <div>
+        <form action="/register" enctype="multipart/form-data" method="post">
+            Username<input type="text" name="username" placeholder="请输入用户名"><br>
+            Password<input type="password" name="password1" placeholder="请输入密码"><br>
+            Password<input type="password" name="password2" placeholder="请确认密码"><br>
+            <input type="submit" value="注册">
+        </form>
+    </div>
+    <div>
+        已经注册请点这里<a href="/login">登录</a>
+    </div>
+
+{% end %}
